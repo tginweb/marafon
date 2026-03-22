@@ -289,7 +289,7 @@
             border-radius: 60px;
             backdrop-filter: blur(2px);
             width: 100%;
-            display: none;
+            display: block;
             box-sizing: border-box;
         }
 
@@ -391,7 +391,7 @@
                 return { target: START_DATE, type: 'start', label: '🔥 ДО СТАРТА МАРАФОНА 🔥', msg: 'Скоро начнётся твоя трансформация! Готовься!' };
             } 
             else if (now >= START_DATE && now <= END_DATE) {
-                return { target: END_DATE, type: 'active', label: '🏆 ДО ФИНИША МАРАФОНА 🏆', msg: 'Ты в процессе! Каждая секунда приближает sexy тело!' };
+                return { target: END_DATE, type: 'active', label: '🏆 ДО ФИНИША МАРАФОНА 🏆', msg: 'Ты в процессе! Каждая секунда приближает к цели 🎯' };
             } 
             else {
                 return { target: null, type: 'finished', label: '✨ МАРАФОН ЗАВЕРШЁН ✨', msg: 'Поздравляем! Ты проделал невероятный путь! Твоё sex тело — результат!' };
