@@ -128,7 +128,6 @@
             white-space: nowrap;
         }
 
-        /* на узких экранах даты остаются в строке за счёт уменьшения отступов */
         @media (max-width: 480px) {
             .date-info {
                 gap: 0.4rem;
@@ -171,7 +170,7 @@
 
         .timer {
             display: flex;
-            flex-wrap: nowrap;          /* всегда в одну строку */
+            flex-wrap: nowrap;
             justify-content: center;
             gap: 0.8rem;
         }
@@ -180,9 +179,9 @@
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(8px);
             border-radius: 1.2rem;
-            padding: 0.4rem 0;
+            padding: 0.6rem 0.3rem;  /* увеличенные внутренние отступы */
             flex: 0 1 auto;
-            min-width: 65px;
+            min-width: 70px;
             text-align: center;
             border: 1px solid rgba(255, 200, 180, 0.7);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -213,18 +212,17 @@
             font-weight: 600;
             color: #ffcf9a;
             letter-spacing: 1px;
-            margin-top: 0.2rem;
+            margin-top: 0.3rem;
         }
 
-        /* адаптация для очень узких экранов: уменьшаем блоки и шрифт */
+        /* адаптация для узких экранов */
         @media (max-width: 550px) {
             .timer {
                 gap: 0.4rem;
             }
             .time-block {
-                min-width: 55px;
-                padding: 0.3rem 0;
-                border-radius: 1rem;
+                min-width: 58px;
+                padding: 0.5rem 0.2rem;
             }
             .time-number {
                 font-size: 1.6rem;
@@ -237,10 +235,11 @@
 
         @media (max-width: 420px) {
             .time-block {
-                min-width: 48px;
+                min-width: 52px;
+                padding: 0.4rem 0.1rem;
             }
             .time-number {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
             }
             .time-label {
                 font-size: 0.55rem;
@@ -278,6 +277,7 @@
             box-shadow: 0 0 6px #ffaa77;
         }
 
+        /* статусное сообщение — теперь по центру и на всю ширину */
         .status-message {
             text-align: center;
             font-size: 0.85rem;
@@ -285,11 +285,12 @@
             margin-top: 1rem;
             color: #FFDEB3;
             background: rgba(0, 0, 0, 0.4);
-            padding: 0.4rem 0.8rem;
+            padding: 0.5rem 1rem;
             border-radius: 60px;
-            display: inline-block;
-            width: auto;
             backdrop-filter: blur(2px);
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
         }
 
         .footer-motivation {
